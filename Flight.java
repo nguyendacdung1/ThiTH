@@ -4,10 +4,17 @@ public class Flight {
 
     public Flight(){
         number=0;
+        destination=null;
     }
     public Flight(int number, String destination){
-        this.number=number;
-        this.destination=destination;
+        if (number>0 && !destination.equals(null)){
+            this.number=number;
+            this.destination=destination;
+        }
+        else {
+            this.number=0;
+            this.destination=null;
+        }
     }
 
     public int getNumber() {
